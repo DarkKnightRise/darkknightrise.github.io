@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous|Teko:500,600');
+
+html,body {
+    margin: 0;
+    padding: 0;
+    background: #f1f1f1;
+}
+
+header {
+    background: #ffffff;
+    /* box-shadow: 0 -8px 20px 0px #000000; */
+    line-height: 30px;
+    overflow: hidden;
+}
+ 
+header .wrapper {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .wrapper h1 {
+    font-family: 'Righteous', cursive; 
+}
+
+header nav ul li{
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/*========== Main Section ==========*/
+section {
+    width: 80%;
+    margin: auto;
+}
+section .content {
+    background: #ffffff;
+    width: 25%;
+    overflow: hidden;
+    margin: 10px;
+}
+section .content img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+section .content h3 {
+    font-family: 'Teko', sans-serif;
+    margin: 0;
+    padding: 10px;
+}
