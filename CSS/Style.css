@@ -8,11 +8,12 @@ html,body {
 
 header {
     background: #ffffff;
-    /* box-shadow: 0 -8px 20px 0px #000000; */
     line-height: 30px;
     overflow: hidden;
 }
- 
+header .toggle-nav-btn{
+    display: none;
+}
 header .wrapper {
     width: 80%;
     margin: auto;
@@ -20,25 +21,26 @@ header .wrapper {
     align-items: center;
     justify-content: space-between;
 }
-
 header .wrapper h1 {
     font-family: 'Righteous', cursive; 
 }
-
+header nav ul {
+    padding: 0;
+}
 header nav ul li{
     display: inline;
     margin: 10px;
     padding: 10px;
     font-family: 'Ubuntu', sans-serif;
 }
-
 header nav ul li a {
     text-decoration: none;
     color: #000000;
 }
 
+
 /*========== Main Section ==========*/
-section {
+section .wrapper {
     width: 80%;
     margin: auto;
 }
@@ -57,4 +59,56 @@ section .content h3 {
     font-family: 'Teko', sans-serif;
     margin: 0;
     padding: 10px;
+}
+
+
+/*=========================================
+    Smartphone & Phablet & Tablet Size
+========================================*/
+
+@media only screen and (max-width: 768px) {
+    header .wrapper {
+        width: 100%;
+        display: block;
+    }
+    header .toggle-nav-btn{
+        display: block;
+        padding: 20px;
+        float: left;
+        font-size: 30px;
+    }
+    header .wrapper h1 {
+        text-align: center;
+    }
+    header .wrapper nav {
+        text-align: center;
+    }
+    header .wrapper nav ul {
+        margin: 0;
+    }
+    header .wrapper nav ul li{
+        display: block;
+        margin: 0;
+        border-top: 0.5px solid #9c9c9c;
+    }
+    header .wrapper nav ul li a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    header .wrapper nav li a:hover{
+        background: #0099ff;
+        color: #ffffff;
+        padding: 16px;
+        width: 100%;
+    }
+
+    /*========== Content Section ==========*/
+    section {
+        width: 100%;
+        margin: 20px 0;
+    }
+    section .content {
+        width: 100%;
+    }
 }
