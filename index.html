@@ -2,42 +2,107 @@
 <html>
 <head>
     <title>D-Knight</title>
-    <link rel="stylesheet" type="text/css" href="CSS/Style.css" />
-    <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!----------------- CSS File ------------------->
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css"/>
+    <link  rel="stylesheet" href="Assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
     <!----------------- Header ------------------->
     <header>
-        <div class="toggle-nav-btn">
-            <i class="fa fa-bars"></i>
-        </div>
+        <div class="nav-btn"></div>
         <div class="wrapper">
             <h1>D-KNIGHT</h1>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Catagories</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="HTML/Pages/about.html">About</a></li>
                 </ul>
             </nav>
-        </div>
+        </div>  
     </header>
 
     <!----------------- Content Section ------------------->
     <section>
-        <div class="wrapper">
+        <h1>Latest Posts</h1>
+        <div class="post-wrapper">
             <div class="content">
-                <img src="Images/Covers/cupp_wordlist_tutorial_cover.jpg">
-                <h3>How to install javasctipt on termux</h3>
-                <p>October 14 2018 | Sunday</p>
-                <p>By D-Knight</p>
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to download CUPP and generate wordlist in CUPP</a></div>
             </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/Customization-of-start-text-cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/How-to-call_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install call someone on termux</a></div>
+            </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/Oh-My-Zsh_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install Oh-My-Zsh on termux</a></div>
+            </div>
+        </div>
+        <h1>Popular Posts</h1>
+        <div class="post-wrapper">
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+        </div>
+        <div class="post-wrapper">
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a>
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+            <div class="content">
+                <a href="#"><img src="Assets/Images/Covers/cupp_wordlist_tutorial_cover.jpg"></a> 
+                <div class="title-wrapper"><a href="#" class="post-title-link">How to install javasctipt on termux</a></div>
+            </div>
+        </div>
+        <div class="pagination">
+            <a href="#" class="page">Previous</a>
+            <a href="#" class="page">1</a>
+            <a href="#" class="page">2</a>
+            <a href="#" class="page">3</a>
+            <a href="#" class="page">Next</a>
         </div>
     </section>
 
-
-
+    <!----------------- Footer ------------------->
+    <footer>
+        <div class="social-media">
+            <a href="#"><i class="fa fa-youtube-play"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        <p>&copy; D-Knight Version 1.0</p>
+    </footer>
 </body>
-    <script src="JS/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <!----------------- JS Scripts ------------------->
+    <script type="text/javascript" src="JS/JQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="JS/main.js"></script>
 </html>

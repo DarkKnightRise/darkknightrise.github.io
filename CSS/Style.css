@@ -1,18 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous|Teko:500,600');
 
-html,body {
-    margin: 0;
-    padding: 0;
-    background: #f1f1f1;
+@font-face {
+    font-family: Big Noddle;
+    src: url(../Assets/Fonts/big_noodle_titling.ttf);
 }
 
+:root {
+    --Background-Color: #ffffff;
+    --Foreground-Color: #5c5c5c;
+    --Shadow-Color: #0000004d;
+    --Hover-Gray-Foreground-Color: #dddddd;
+    --OceanBlue-Gradient: linear-gradient(to bottom left, #233192, #1bFFFF);
+}
+
+*, *::before, *::after {
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--Foreground-Color);
+    margin: 0;
+    padding: 0;
+}
+
+/*=========================================
+                Desktop
+=========================================*/
+
+
+/*========
+                   Home
+======================================*/
+
+
+/*========== Header ==========*/
 header {
-    background: #ffffff;
     line-height: 30px;
     overflow: hidden;
-}
-header .toggle-nav-btn{
-    display: none;
+    box-shadow: 0px 0px 2px var(--Shadow-Color);
+    padding: 20px;
+    margin: 0px 0px 30px 0px;
 }
 header .wrapper {
     width: 80%;
@@ -22,7 +47,8 @@ header .wrapper {
     justify-content: space-between;
 }
 header .wrapper h1 {
-    font-family: 'Righteous', cursive; 
+    font-family: 'Righteous', cursive;
+    color: var(--Foreground-Color);
 }
 header nav ul {
     padding: 0;
@@ -31,57 +57,219 @@ header nav ul li{
     display: inline;
     margin: 10px;
     padding: 10px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: Big Noddle;
+    font-size: 22px;
 }
-header nav ul li a {
-    text-decoration: none;
-    color: #000000;
+header nav ul li a:hover {
+    cursor: pointer;
+    color: var(--Foreground-Color);
 }
 
 
 /*========== Main Section ==========*/
-section .wrapper {
+section {
     width: 80%;
     margin: auto;
 }
-section .content {
-    background: #ffffff;
-    width: 25%;
+section h1 {
+    font-family: Big Noddle;
+    font-size: 30px;
+}
+section h1::before {
+    content: '';
+    display: block;
+    float: left;    
+    width: 2.5px;
+    height: 34px;
+    margin-right: 5px;
+    background: var(--Foreground-Color);
+}
+section .post-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+section .post-wrapper .content {
+    width: 30%;
     overflow: hidden;
     margin: 10px;
+    box-shadow: 0 0 2px var(--Shadow-Color);
 }
-section .content img {
+section .post-wrapper .content a img {
     width: 100%;
     margin: 0;
     padding: 0;
 }
-section .content h3 {
-    font-family: 'Teko', sans-serif;
-    margin: 0;
+section .post-wrapper .content::before {
+    content: '10';
+    position: absolute;
+    color: white;
+    background: rgba(255, 199, 126, 0.548);
+    padding: 10px 10px;
+}
+section .post-wrapper .content .title-wrapper {
     padding: 10px;
+}
+section .post-wrapper .content .title-wrapper .post-title-link {
+    font-family: 'Teko', sans-serif;
+    /* margin: 10px; */
+}
+
+section .pagination {
+    display: flex;
+    justify-content: center;
+}
+section .pagination .page {
+    color: var(--Foreground-Color);
+    border: 1px solid var(--Hover-Gray-Foreground-Color);
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+section .pagination .page:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+section .pagination .page:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+section .pagination .page:hover {
+    background: var(--Hover-Gray-Foreground-Color);
+}
+
+/*========== Footer ==========*/
+footer {
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 2px var(--Shadow-Color);
+    margin-top: 20px;
+}
+footer .social-media {
+    padding: 10px 0;
+}
+footer .social-media a { 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+footer .social-media a i {
+    color: var(--Foreground-Color);
+    font-size: 35px;
+    transition: 0.5s all;
+}
+footer .social-media a:hover > i {
+    transform: scale(1.6) rotate(-25deg);
+}
+footer p {
+    margin: 0 0 10px 0;
+    color: var(--Foreground-Color);
+}
+
+/*========
+                   About
+======================================*/
+
+#section {
+    width: 60%;
+}
+#section .about-heading {
+    font-size: 35px;
+    margin: 20px 0 20px 0;
+}
+#section p {
+    margin: 0 0 0 10px;
+}
+
+
+/*========
+                Post Page
+======================================*/
+
+
+/*========== Global ==========*/
+
+.note-text {
+    padding-left: 30px;
+}
+
+.code {
+    padding: 10px 10px 10px 15px;
+    background: #000000;
+    color: #ffffff;
+    font-family: monacoB;
+    font-size: 15px;
+}
+
+/*========== Local ==========*/
+
+#post-page-section {
+    width: 80%;
+    /* overflow: hidden; */
+}
+#post-page-section .post-title {
+    padding: 20px 0;
+    font-size: 35px;
+}
+#post-page-section .post-text p {
+    font-size: 20px;
+    padding: 10px 0;
+}
+#post-page-section .post-text .note-heading {
+    margin: 0;
+    padding: 0;
 }
 
 
 /*=========================================
-    Smartphone & Phablet & Tablet Size
-========================================*/
+            Smartphone & Phablet 
+=========================================*/
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 480px) {
+
+    /*========
+                       Home
+    ======================================*/
+
+    /*========== Header ==========*/
+    header {
+        padding: 0;
+        margin: 0;
+    }
     header .wrapper {
         width: 100%;
         display: block;
     }
-    header .toggle-nav-btn{
+    header .nav-btn{
         display: block;
-        padding: 20px;
-        float: left;
+        float: right;
         font-size: 30px;
+        color: #5c5c5c;
+        padding: 20px 10px 20px 0px;
+    }
+    header .nav-btn:before{
+        content: '\f0c9';
+        font-family: fontAwesome;
+    }
+    header .nav-btn.active:before{
+        content: '\f00d';
+        font-family: fontAwesome;
+    }
+    header .nav-btn:hover{
+        cursor: pointer;
     }
     header .wrapper h1 {
-        text-align: center;
+        text-align: left;
+        padding: 20px 0px 20px 10px;
     }
     header .wrapper nav {
-        text-align: center;
+        height: 0;
+        transition: 0.3s;
+    }
+    header .wrapper nav.active {
+        height: 150px;
     }
     header .wrapper nav ul {
         margin: 0;
@@ -89,26 +277,57 @@ section .content h3 {
     header .wrapper nav ul li{
         display: block;
         margin: 0;
-        border-top: 0.5px solid #9c9c9c;
-    }
-    header .wrapper nav ul li a {
-        width: 100%;
-        padding: 10px;
         text-align: center;
     }
-    header .wrapper nav li a:hover{
-        background: #0099ff;
-        color: #ffffff;
-        padding: 16px;
-        width: 100%;
+    header .wrapper nav ul li:hover{
+        background: var(--Hover-Gray-Foreground-Color);
+        cursor: pointer;
+    }
+    header .wrapper nav li a{
+        color: var(--Foreground-Color);
+        font-family: BigNoodleTitling;
+        font-size: 22px;
     }
 
     /*========== Content Section ==========*/
     section {
-        width: 100%;
-        margin: 20px 0;
+        width: 90%;
+        margin: 30px auto;
     }
-    section .content {
-        width: 100%;
+    section .post-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
+    section .post-wrapper .content {
+        width: calc(100% - 6%);
+        overflow: hidden;
+        box-shadow: none;
+        margin: 20px auto;
+    }
+    section .post-wrapper .content .title-wrapper {
+        display: none;
+    }
+    
+    
+    /*========
+                       About
+    ======================================*/
+
+    #section {
+        height: 68vh;
+        width: 75%;
+    }
+
+
+    /*========
+                    Post Page
+    ======================================*/
+
+    #post-page-section {
+        width: 90%;
+        /* overflow: hidden; */
+    }
+
 }
