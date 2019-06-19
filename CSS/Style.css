@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous|Teko:500,600');
+/* @import url('https://fonts.googleapis.com/css?family=Righteous|Teko:500,600'); */
 
 @font-face {
     font-family: Big Noddle;
@@ -6,11 +6,28 @@
 }
 
 :root {
+    /* ==== Colors ==== */
     --Background-Color: #ffffff;
-    --Foreground-Color: #5c5c5c;
-    --Shadow-Color: #0000004d;
+    --Foreground-Color: #4a4a4a;
+    --Main-Background-Color: #ececec;
+    --Border-Color: #0000002d;
     --Hover-Gray-Foreground-Color: #dddddd;
     --OceanBlue-Gradient: linear-gradient(to bottom left, #233192, #1bFFFF);
+
+    /* ==== Properties ==== */
+
+    /* Border */
+    --Border-Normal: 2px solid var(--Border-Color);
+    --Border-Min: 3px solid var(--Border-Color);
+    --Border-Max: 3.5px solid var(--Border-Color);
+
+    /* Fonts */
+    --Big-Noodle: Big Noddle;
+    --Monaco: monacoB;
+    --Code-Font-Size: 12px;
+    --Normal-Font-Size: 20px;
+    --Min-Font-Size: 30px;
+    --Max-Font-Size: 50px;
 }
 
 *, *::before, *::after {
@@ -18,8 +35,8 @@
     list-style-type: none;
     color: var(--Foreground-Color);
     margin: 0;
-    padding: 0;
 }
+
 
 /*=========================================
                 Desktop
@@ -33,14 +50,15 @@
 
 /*========== Header ==========*/
 header {
-    line-height: 30px;
+    background: var(--Background-Color);
+    line-height: 20px;
     overflow: hidden;
-    box-shadow: 0px 0px 2px var(--Shadow-Color);
     padding: 20px;
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 20px 0px;
+    box-shadow: 0 0 6px 0.25px #393939;
 }
 header .wrapper {
-    width: 80%;
+    width: 85%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -68,21 +86,16 @@ header nav ul li a:hover {
 
 /*========== Main Section ==========*/
 section {
+    background: var(--Background-Color);
     width: 80%;
-    margin: auto;
+    margin: 40px auto;
+    padding: 20px 0;
 }
 section h1 {
+    margin: auto;
+    padding: 0 0 5px 20px;
     font-family: Big Noddle;
     font-size: 30px;
-}
-section h1::before {
-    content: '';
-    display: block;
-    float: left;    
-    width: 2.5px;
-    height: 34px;
-    margin-right: 5px;
-    background: var(--Foreground-Color);
 }
 section .post-wrapper {
     display: flex;
@@ -93,26 +106,21 @@ section .post-wrapper .content {
     width: 30%;
     overflow: hidden;
     margin: 10px;
-    box-shadow: 0 0 2px var(--Shadow-Color);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.04);
+    border: 1.25px solid rgba(0,0,0,.09);
+    border-radius: 2px;
 }
 section .post-wrapper .content a img {
     width: 100%;
     margin: 0;
     padding: 0;
 }
-section .post-wrapper .content::before {
-    content: '10';
-    position: absolute;
-    color: white;
-    background: rgba(255, 199, 126, 0.548);
-    padding: 10px 10px;
-}
 section .post-wrapper .content .title-wrapper {
     padding: 10px;
+    position: relative;
 }
 section .post-wrapper .content .title-wrapper .post-title-link {
     font-family: 'Teko', sans-serif;
-    /* margin: 10px; */
 }
 
 section .pagination {
@@ -139,10 +147,10 @@ section .pagination .page:hover {
 
 /*========== Footer ==========*/
 footer {
+    background: var(--Background-Color);
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 0 2px var(--Shadow-Color);
-    margin-top: 20px;
+    box-shadow: 0 -1px 5px #393939;
 }
 footer .social-media {
     padding: 10px 0;
@@ -183,43 +191,6 @@ footer p {
 }
 
 
-/*========
-                Post Page
-======================================*/
-
-
-/*========== Global ==========*/
-
-.note-text {
-    padding-left: 30px;
-}
-
-.code {
-    padding: 10px 10px 10px 15px;
-    background: #000000;
-    color: #ffffff;
-    font-family: monacoB;
-    font-size: 15px;
-}
-
-/*========== Local ==========*/
-
-#post-page-section {
-    width: 80%;
-    /* overflow: hidden; */
-}
-#post-page-section .post-title {
-    padding: 20px 0;
-    font-size: 35px;
-}
-#post-page-section .post-text p {
-    font-size: 20px;
-    padding: 10px 0;
-}
-#post-page-section .post-text .note-heading {
-    margin: 0;
-    padding: 0;
-}
 
 
 /*=========================================
@@ -327,7 +298,6 @@ footer p {
 
     #post-page-section {
         width: 90%;
-        /* overflow: hidden; */
     }
 
 }

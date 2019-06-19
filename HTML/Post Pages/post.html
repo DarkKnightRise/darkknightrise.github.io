@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>D-Knight</title>
 
     <!----------------- CSS File ------------------->
     <link rel="stylesheet" type="text/css" href="../../CSS/Style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../CSS/post.css"/>
     <link  rel="stylesheet" href="../../Assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -13,12 +16,12 @@
     <header>
         <div class="nav-btn"></div>
         <div class="wrapper">
-            <h1>D-KNIGHT</h1>
+            <h1>RedDeath</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Catagories</a></li>
-                    <li><a href="HTML/Pages/about.html">About</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="../Pages/about.html">About</a></li>
                 </ul>
             </nav>
         </div>  
@@ -26,32 +29,41 @@
 
     <!----------------- Content Section ------------------->
     <section id="post-page-section">
-        <h1 class="post-title">Termux-API</h1>
-        <div class="post-text">
-            <p>This article is about how to call in termux by using termux api</p>
-            <p class="note-heading"><strong>Note:</strong></p>
-            <div class="note-text">This process required regular call charges<br></div>
-            <p>First of all install termux api from Play Store<br>
-            <a href="#">Termux-API</a>
-            <p>Now open termux and type below mention commands</p>
-            <div class="code">$ pkg update upgrade <br>$ pkg install termux-api</div></p>
-            <h1>Send SMS</h1>
-            <p>To send sms type termux-api send-sms (number) </p>
-            <div class="code">$ send-sms -n 123------- </div>
-        </div> 
-    </section>
-    <aside>
-        <h1>Recently Post</h1>
-        <ul>
-            <li><a href="">sample</a></li>
-            <li><a href="">sample</a></li>
-            <li><a href="">sample</a></li>
-            <li><a href="">sample</a></li>
-            <li><a href="">sample</a></li>
-        </ul>
-        <h1>Popular Post</h1>
-    </aside>
+        <article>
+            <h1 class="post-title">How to use Termux-API</h1>
+            <h3 class="publish">Published June 9 2019</h3>
+            <div class="img_container">
+                <img src="../../Assets/Images/Covers/Customization-of-start-text-cover.jpg">
+            </div>
+            <div class="post-text">
+                This article is about how to call in termux by using termux api
 
+                <br><br><span class="note-heading">Note:</span><br>
+                <span class="note-text">This process required regular call charges</span>
+
+                <br><br> First of all install <a href="#">Termux-API</a> from Play Store
+                
+                Now open termux and type below mention commands
+                <div class="code">$ pkg update upgrade <br>$ pkg install termux-api</div></p>
+                
+                <h2 class="sub-heading">Send SMS</h2>
+                To send sms in termux
+                <div class="code">$ termux-send-sms -n 123------- </div>
+
+                <h2 class="sub-heading">Call</h2>
+                To Call in termux
+                <div class="code">$ termux-telephony-call 123------- </div>
+            </div> 
+        </article>
+        <div id="comment-section">
+            <form action="">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Comment">
+                <button type="submit">Comment</button>
+            </form>
+        </div>
+    </section>
+    
     <!----------------- Footer ------------------->
     <footer>
         <div class="social-media">

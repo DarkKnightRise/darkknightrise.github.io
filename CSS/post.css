@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Oxygen&display=swap');
+
+
+/*========
+                Post Page
+======================================*/
+
+
+/*========== Global ==========*/
+
+.note-text {
+    padding-left: 30px;
+}
+.note-heading {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.sub-heading {
+    margin: 25px 0 10px 0;
+}
+.code {
+    padding: 10px 10px 10px 15px;
+    background: #000000;
+    color: #ffffff;
+    font-family: monacoB;
+    font-size: var(--Code-Font-Size);
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+/*========== Local ==========*/
+#post-page-section {
+    /* margin: auto; */
+    padding: 0 0 20px 0;
+}
+#post-page-section article {
+    width: 80%;
+    margin: auto;
+    padding: 30px 0;
+    background: #ffffff;
+    font-size: 19px;
+    font-family: 'Oxygen', sans-serif;
+}
+#post-page-section article .post-title {
+    padding: 20px 0px 0px 0px;
+    font-family: 'Merriweather', serif;
+    font-size: 45px;
+}
+#post-page-section article .publish {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+}
+#post-page-section article .img_container {
+    height: 200px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+#post-page-section article .img_container img{
+    width: 100%;
+}
+/* Comment Section */
+#post-page-section #comment-section {
+    width: 60%;
+    margin: auto;
+}
+#post-page-section #comment-section input[type="text"] {
+    width: 100%;
+    height: 30px;
+    margin: 5px 0;
+}

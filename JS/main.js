@@ -5,7 +5,5 @@ const navList = document.querySelector('li');
 
 navBar.addEventListener('click', function() {
 	navBar.classList.toggle('active');
-	nav.classList.toggle('active');    
+	nav.classList.toggle('active');
 });
-
-
