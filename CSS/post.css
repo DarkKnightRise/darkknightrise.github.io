@@ -70,3 +70,13 @@
     height: 30px;
     margin: 5px 0;
 }
+
+/*=========================================
+            Smartphone & Phablet 
+=========================================*/
+
+@media only screen and (max-width: 480px) {
+    #post-page-section article {
+        width: 98%;
+    }
+}
