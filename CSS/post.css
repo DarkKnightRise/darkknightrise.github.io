@@ -77,10 +77,10 @@
 
 @media only screen and (max-width: 480px) {
     #post-page-section {
-        width: 95%;
         margin: auto;
     }
     #post-page-section article {
         width: 100%;
+        font-size: 18px;
     }
 }
