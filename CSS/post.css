@@ -29,6 +29,9 @@
     border-radius: 3px;
     margin: 10px 0;
 }
+.str {
+    color: blue;
+}
 
 /*========== Local ==========*/
 #post-page-section {
@@ -82,6 +85,8 @@
     }
     #post-page-section article {
         width: 100%;
+        margin: 15px 0;
+        padding: 0;
         font-size: 18px;
     }
 }

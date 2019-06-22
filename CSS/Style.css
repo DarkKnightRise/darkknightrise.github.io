@@ -240,7 +240,8 @@ footer p {
         transition: 0.3s;
     }
     header .wrapper nav.active {
-        height: 150px;
+        height: 125px;
+        background: #e8e8e8;
     }
     header .wrapper nav ul {
         margin: 0;
